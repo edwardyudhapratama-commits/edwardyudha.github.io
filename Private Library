@@ -1,76 +1,166 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <title>Edward Yudha Pratama</title>
 
-    <title>Narrow Jumbotron Template for Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../css/editor.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            font-size: 170%;
+            background-color: #e8f3ff;
+            background-image: url("https://www.transparenttextures.com/patterns/cloudy-day.png");
+            background-repeat: repeat;
+        }
 
-    <!-- Custom styles for this template -->
-    <link href="narrow-jumbotron.css" rel="stylesheet">
-  </head>
+        .box {
+            background: #ffffff;
+            width: 70%;
+            margin: auto;
+            padding: 40px;
+            border-radius: 22px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            border-top: 6px solid #f6c1d9;
+            border-bottom: 6px solid #cfe8cc;
+        }
 
-  <body>
+        h1 {
+            font-family: "Edwardian Script ITC", "Segoe Script", "Lucida Handwriting", cursive;
+            font-size: 80px;
+            color: #7fb3d5;
+            text-align: center;
+            margin-bottom: 5px;
+        }
 
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Project name</h3>
-      </div>
+        .subtitle {
+            text-align: center;
+            font-size: 90%;
+            color: #8f9f8f;
+            margin-bottom: 25px;
+        }
 
-      <div class="jumbotron">
-        <h1 class="display-3" contenteditable="true" spellcheckker="false">Edward Yudha Library</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-      </div>
+        hr {
+            border-top: 2px solid #f6c1d9;
+            width: 50%;
+        }
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        .search-area {
+            margin: 25px 0;
+            text-align: center;
+        }
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+        .search-box {
+            width: 60%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 1px solid #cfe8cc;
+            font-size: 90%;
+            outline: none;
+            background-color: #f9fffb;
+        }
 
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        .search-btn {
+            padding: 12px 26px;
+            border-radius: 30px;
+            border: none;
+            background-color: #f6c1d9;
+            color: #ffffff;
+            font-size: 85%;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background-color: #e8a9c8;
+        }
+
+        /* IDENTITAS RAPI */
+        .info {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            font-size: 95%;
+            color: #5f6f7f;
+        }
+
+        td {
+            padding: 6px 10px;
+        }
+
+        td.label {
+            text-align: right;
+            font-weight: bold;
+            color: #7fb3d5;
+        }
+
+        td.colon {
+            text-align: center;
+            width: 10px;
+        }
+
+        td.value {
+            text-align: left;
+        }
+
+        .highlight {
+            color: #7fb3d5;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<center>
+    <br><br>
+
+    <div class="box">
+        <h1>Welcome</h1>
+        <div class="subtitle">
+            Private Library Website
         </div>
 
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        <p style="text-align:center;">
+            Website ini dibuat untuk memenuhi tugas mata kuliah
+            <span class="highlight">Pengembangan Web Perpustakaan</span>.
+        </p>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+        <hr>
 
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <div class="search-area">
+            <input type="text" placeholder="Cari judul buku..." class="search-box">
+            <button class="search-btn">Cari</button>
         </div>
-      </div>
 
-      <footer class="footer">
-        <p>© Company 2017</p>
-      </footer>
+        <div class="info">
+            <table>
+                <tr>
+                    <td class="label">Nama</td>
+                    <td class="colon">:</td>
+                    <td class="value">Edward Yudha Pratama</td>
+                </tr>
+                <tr>
+                    <td class="label">NIM</td>
+                    <td class="colon">:</td>
+                    <td class="value">230709042</td>
+                </tr>
+                <tr>
+                    <td class="label">Kelas</td>
+                    <td class="colon">:</td>
+                    <td class="value">B</td>
+                </tr>
+                <tr>
+                    <td class="label">Universitas</td>
+                    <td class="colon">:</td>
+                    <td class="value">Universitas Sumatera Utara</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
-    </div> <!-- /container -->
-  
-
+</center>
 </body>
 </html>
