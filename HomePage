@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edwardian Tales Homepage</title>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<text y='0.9em' font-size='90'>📔</text>
+</svg>">
+
+<style>
+
+body { 
+font-family:'Times New Roman', serif; 
+margin:0; 
+padding:0; 
+text-align:center; 
+background-color:#f4f6f9; 
+scroll-behavior:smooth;
+}
+
+header{
+display:flex; 
+justify-content:space-between; 
+align-items:center; 
+padding:10px 20px; 
+background:#fff; 
+box-shadow:0 4px 10px rgba(0,0,0,0.1); 
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:24px; 
+font-weight:bold; 
+color:#232c42;
+}
+
+.search-bar{
+flex:1; 
+display:flex; 
+justify-content:center; 
+margin:10px 20px; 
+position:relative;
+}
+
+.search-bar input[type="text"]{
+width:100%; 
+max-width:400px; 
+padding:8px 12px; 
+border-radius:6px; 
+border:1px solid #ccc; 
+font-size:16px;
+}
+
+.suggestions{
+list-style:none; 
+margin:0; 
+padding:0; 
+background:#fff; 
+position:absolute; 
+top:38px; 
+width:100%; 
+max-width:400px; 
+border:1px solid #ccc; 
+border-radius:6px; 
+z-index:100;
+}
+
+.suggestions li{
+padding:6px 10px; 
+cursor:pointer; 
+transition:0.2s;
+}
+
+.suggestions li:hover{
+background:#f0d9c3;
+}
+
+.header-buttons{
+display:flex; 
+gap:10px; 
+margin:10px 0;
+}
+
+.header-btn{
+padding:8px 16px; 
+border-radius:6px; 
+background-color:#232c42; 
+color:white; 
+font-weight:bold; 
+text-decoration:none; 
+transition:0.3s;
+}
+
+.header-btn:hover{
+background-color:#752a39;
+}
+
+.nav-red-box{
+background-color:#752a39; 
+color:white; 
+padding:12px 0; 
+font-weight:bold; 
+display:flex; 
+justify-content:center; 
+gap:40px; 
+flex-wrap:wrap;
+}
+
+.nav-red-box .nav-link{
+color:white; 
+text-decoration:none; 
+font-size:18px; 
+transition:0.3s;
+}
+
+.nav-red-box .nav-link:hover{
+color:#f0d9c3;
+}
+
+/* EVENT TICKER */
+
+.event-ticker{
+background:#fff8f0;
+padding:10px;
+font-family:'Times New Roman', serif;
+font-size:16px;
+font-weight:bold;
+}
+
+.event-ticker a{
+text-decoration:none;
+color:#752a39;
+}
+
+.event-ticker a:hover{
+color:#232c42;
+}
+
+.main-box{
+background-color:rgba(255,248,240,0.95); 
+padding:50px 70px; 
+border-radius:15px; 
+box-shadow:0 12px 30px rgba(0,0,0,0.3); 
+max-width:900px; 
+margin:40px auto;
+}
+
+.main-box h1{
+margin-bottom:20px; 
+font-size:36px; 
+color:#232c42;
+}
+
+.collection-section{
+padding:50px 20px; 
+background-color:#fff8f0; 
+max-width:1200px; 
+margin:40px auto; 
+border-radius:15px; 
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.collection-section h2{
+font-size:32px; 
+color:#232c42; 
+margin-bottom:30px;
+}
+
+.collection-grid{
+display:grid; 
+grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); 
+gap:20px;
+}
+
+.collection-item{
+background-color:#fff; 
+border-radius:12px; 
+padding:10px; 
+box-shadow:0 5px 15px rgba(0,0,0,0.1); 
+transition:transform 0.3s; 
+display:block; 
+text-decoration:none;
+}
+
+.collection-item img{
+width:100%; 
+border-radius:8px;
+}
+
+.collection-item p{
+margin-top:10px; 
+font-weight:bold; 
+color:#752a39;
+}
+
+.collection-item:hover{
+transform:translateY(-5px);
+}
+
+footer{
+margin-top:50px; 
+padding:40px 20px; 
+background:#fff; 
+box-shadow:0 -5px 15px rgba(0,0,0,0.05);
+}
+
+.footer-container{
+display:flex; 
+justify-content:space-between; 
+align-items:flex-start; 
+max-width:1000px; 
+margin:auto; 
+flex-wrap:wrap; 
+text-align:left; 
+gap:20px;
+}
+
+.footer-left, .footer-right{
+flex:1 1 300px;
+}
+
+.footer-right form input, 
+.footer-right form textarea{
+width:100%; 
+padding:8px; 
+border-radius:6px; 
+border:1px solid #ccc; 
+box-sizing:border-box; 
+margin-bottom:10px; 
+font-family:inherit;
+}
+
+.footer-right form input[type="submit"]{
+background-color:#232c42; 
+color:white; 
+border:none; 
+cursor:pointer; 
+font-weight:bold; 
+transition:0.3s;
+}
+
+.footer-right form input[type="submit"]:hover{
+background-color:#752a39;
+}
+
+@media(max-width:768px){
+header{flex-direction:column; align-items:stretch;}
+.search-bar{order:2; margin:10px 0;}
+.header-buttons{order:3; justify-content:center;}
+.logo{order:1; text-align:center; margin-bottom:10px;}
+h1{font-size:28px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Edwardian Tales</div>
+
+<div class="search-bar">
+<input type="text" id="search" placeholder="Search books...">
+<ul class="suggestions" id="suggestions"></ul>
+</div>
+
+<div class="logo">Edwardian Tales</div>
+</header>
+
+<div class="nav-red-box">
+<a href="about us.html" class="nav-link">About Us</a>
+<a href="halaman2index.html" class="nav-link">Hostess</a>
+<a href="reader.html" class="nav-link">Readers Chamber</a>
+<a href="#feedback" class="nav-link">Feedback</a>
+</div>
+
+<div class="event-ticker">
+<marquee onmouseover="this.stop()" onmouseout="this.start()">
+<a href="pages_at_sunset.html">
+🌅 Pages at Sunset - A gentle afternoon of books, reflections, and conversation at Edwardian Tales. Click to discover the event.
+</a>
+</marquee>
+</div>
+
+<div class="main-box">
+<h1>Welcome Dearest Gentle Readers</h1>
+</div>
+
+<section class="collection-section">
+<h2>Our Collection</h2>
+
+<div class="collection-grid">
+
+<a href="koleksi buku/book1.html" class="collection-item">
+<img src="cover buku/book 1.jpg">
+<p>To Sir Phillip, With Love</p>
+</a>
+
+<a href="collection/book2.html" class="collection-item">
+<img src="assets/book2.jpg">
+<p>Book Title 2</p>
+</a>
+
+<a href="collection/book3.html" class="collection-item">
+<img src="assets/book3.jpg">
+<p>Book Title 3</p>
+</a>
+
+</div>
+</section>
+
+<footer id="feedback">
+
+<div class="footer-container">
+
+<div class="footer-left">
+<h3>Edwardian Tales</h3>
+<p>© 2026 Edward Yudha Pratama</p>
+<p>All Rights Reserved to Readers</p>
+</div>
+
+<div class="footer-right">
+
+<h3>Readers’ Notes</h3>
+
+<form action="feedback.php" method="POST">
+
+<input type="text" name="signature" placeholder="Signature" required>
+
+<textarea name="message" placeholder="Write Your Letter..." required></textarea>
+
+<input type="submit" value="Send">
+
+</form>
+
+<p id="notif" style="color:#752a39;"></p>
+
+</div>
+</div>
+</footer>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+if(params.get('status')==='success'){
+document.getElementById('notif').textContent="We have most joyfully received your note.💗";
+}
+
+const books = [
+{ title:"To Sir Phillip, With Love", link:"koleksi buku/book1.html" },
+];
+
+const input = document.getElementById('search');
+const suggestions = document.getElementById('suggestions');
+
+input.addEventListener('input', () => {
+
+const query = input.value.toLowerCase();
+suggestions.innerHTML='';
+
+if(!query) return;
+
+const filtered = books.filter(book =>
+book.title.toLowerCase().includes(query)
+);
+
+filtered.forEach(book => {
+
+const li=document.createElement('li');
+li.textContent=book.title;
+
+li.addEventListener('click',()=>{
+window.location.href=book.link;
+});
+
+suggestions.appendChild(li);
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
